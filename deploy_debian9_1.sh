@@ -6,5 +6,5 @@ apt-get -y install iptables-persistent
 iptables -I OUTPUT -p tcp --match multiport --dports 25,465,587 -j DROP
 netfilter-persistent save
 
-/usr/src/deploy_network.sh $2"
-/usr/src/deploy_debian9_2.sh"
+/usr/src/deploy_network.sh
+/usr/src/deploy_debian9_2.sh
