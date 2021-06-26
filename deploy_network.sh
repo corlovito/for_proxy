@@ -14,7 +14,7 @@ interface=$(ext_interface)
 ip_address=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' > net
 
-net=$(sed 's/.$//' addr)
+net=$(sed 's/.$//' net)
 
 echo "post-up /etc/network/ip-add-addresses" >> /etc/network/interfaces
 echo "#!/bin/bash" >> /etc/network/ip-add-addresses
