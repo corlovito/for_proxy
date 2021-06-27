@@ -67,9 +67,7 @@ root - nofile 100000
 (crontab -l 2>/dev/null; echo "0 2 * * * /usr/local/3proxy/archiver.sh") | crontab -; (crontab -l 2>/dev/null; echo "0 0 * * * ( killall config_listener.sh; nohup /usr/local/3proxy/config_listener.sh >> /root/listener.out 2>&1 &)") | crontab -; (crontab -l 2>/dev/null; echo "0 5 * * * /usr/local/3proxy/run_proxyline.sh") | crontab -; (crontab -l 2>/dev/null; echo "0 */3 * * * ( sync; echo 3 > /proc/sys/vm/drop_caches; )") | crontab -; (crontab -l 2>/dev/null; echo "00 1 * * * ntpdate time.nist.gov") | crontab -
 
 
-echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDl+gFPGP/CUTnLhllO9//bSU/5ffihcMbdXIPHq8JSlM8x3ZeFcoXDu4I7R/wIprIkWznU09O8vJs78x3jz9FJmjGFho3Hr6qt/u9Tf+Sj23Qz0ZQkaFXvWWD2PJqV6h5rJFdBgJEuGm+8R/L009VUnEYXoS/f/DyUz/motLe2D8BDWKw/d2v33DJPJgIiedMf9GVM89wuC/MvIg+TgBOzTrzJDtdx28eg8RQSnSJsRL9zYbWmhQ+9e3EGN1ebz68NiENJyuSzNAALFioCwwI4fpMtqj8z+VMiT4N1c12Ed0Z7O8YXqmdwMI5fVM35j2QAuWF++jZBPFvGj7BRLuYJ root@capital >> /root/.ssh/authorized_keys
 
-echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6p4UE5PAx/P4koJgXtKYQqY/9afGrrNLhv94BHnU0sVjyZXCR9BvoKwxAlHPfhbttCMfF5aoD/MAD5hekGmeWjKyhKY24wN5j5wgj9Ng9sCoEMgdIeQ4y8tXTUBJnpVRjPcwTDqLmtyd2fkt5Ch0MtQ95PjQVw+MlFSkLm5m05eduF/PD3anxJmkrgFQpahysznpgprcr6Wz/E53wZhHMpOHJhJy7KanV2B83gyj/HEImk1UX3p2hpRStCJpNQ0P/IgSOLfGnZR4mlzmppMTgHbvk/XA88pdrk4fsokw8yXM/DYzBHOK9KPZR9jCc40eoYpuwItqdHwc7JZ+P8wNd root@capital.spaceproxy.net >> /root/.ssh/authorized_keys
 
 touch /etc/rc.local
 chmod +x /etc/rc.local
