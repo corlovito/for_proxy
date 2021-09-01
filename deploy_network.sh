@@ -19,7 +19,7 @@ net=$(echo $net | cut -c 1-12)
 
 echo "post-up /etc/network/ip-add-addresses" >> /etc/network/interfaces
 echo "#!/bin/bash" >> /etc/network/ip-add-addresses
-for ((i=2; i < 253; i++))
+for ((i=4; i < 255; i++))
 do
         echo ifconfig    $interface:$i $net$i      netmask 255.255.255.0 up >> /etc/network/ip-add-addresses
 done
