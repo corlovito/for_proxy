@@ -31,7 +31,7 @@ chmod +x /usr/local/3proxy/archiver.sh
 chmod +x /etc/network/ip-add-addresses
 mkdir -p /var/log/3proxy/archives
 apt install psmisc -y
-nohup /usr/local/3proxy/config_listener.sh &
+#nohup /usr/local/3proxy/config_listener.sh &
 #apt install sudo -y
 apt-get install net-tools -y
 
