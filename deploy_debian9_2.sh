@@ -22,7 +22,7 @@ git clone https://github.com/z3apa3a/3proxy
 cd 3proxy
 ln -s Makefile.Linux Makefile
 make
-make install
+make install-chroot-dir install-bin
 apt install curl -y
 chmod +x /usr/local/3proxy/run.sh
 chmod +x /usr/local/3proxy/run_proxyline.sh
