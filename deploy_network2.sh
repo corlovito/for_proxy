@@ -19,7 +19,7 @@ ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}
 
 echo "post-up /etc/network/ip-add-addresses" >> /etc/network/interfaces
 echo "#!/bin/bash" >> /etc/network/ip-add-addresses
-for ((i=2; i < 254; i++))
+for ((i=2; i < 255; i++))
 do
         echo ifconfig    $interface:$i $1.$i      netmask 255.255.255.0 up >> /etc/network/ip-add-addresses
 done
