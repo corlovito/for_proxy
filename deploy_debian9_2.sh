@@ -44,7 +44,7 @@ apt-get install net-tools -y
 
  cd /usr/local/3proxy
  touch 3proxy.monitor
- apt-get install ntpdate 
+ apt-get install ntpdate -y
  ntpdate time.nist.gov 
 # chown -R proxyuser:proxyuser .
  echo  "
