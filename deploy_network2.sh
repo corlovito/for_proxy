@@ -5,7 +5,7 @@ ext_interface () {
     for interface in /sys/class/net/*
     do
         [[ "${interface##*/}" != 'lo' ]] && \
-            ping -c1 -W2 -I "${interface##*/}" 8.8.8.8 >/dev/null 2>&1 && \
+            ping -c1 -W2 -I "${interface##*/}" 1.1.1.1 >/dev/null 2>&1 && \
                 printf '%s' "${interface##*/}" && return 0
     done
 }
