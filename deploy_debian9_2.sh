@@ -12,8 +12,6 @@ interface=$(ext_interface)
 
 apt-get update
 apt-get -y install gcc g++ git make bc pwgen vlan zip unzip curl net-tools
-echo port 24442 >> /etc/ssh/sshd_config
-service sshd restart
 
 chmod +x /etc/network/ip-add-addresses
 
